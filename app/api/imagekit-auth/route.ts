@@ -5,12 +5,12 @@ export async function GET() {
    try {
      const authparams = getUploadAuthParams({
          privateKey: process.env.IMAGEKIT_PRIVATE_KEY as string, 
-         publicKey: process.env.IMAGEKIT_PUBLIC_KEY as string,
+         publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY as string,
      })
      return Response.json(
         { 
         authparams,
-         publicKey: process.env.IMAGEKIT_PUBLIC_KEY 
+         publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY 
         }
     )
    } catch (error) {
